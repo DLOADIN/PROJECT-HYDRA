@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  border:none;
+}
+ 
+body{
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  color: #0B3051;
+}
+
+.full-gravity{
+  width: fit-content;
+  height: fit-content;
+}
+
+.gravel{
+  display:flex;
+  justify-content: center;
+}
+
+.gravel ul li a:hover{
+  color:#0B3051;
+  transition: .6s all ease-in;
+}
+.gravel ul li a{
+  text-decoration: none;
+  color: #fff;
+  margin:3.8rem;
+  padding: 1.3rem;
+  font-weight: bolder;
+}
+.gravel ul{
+  list-style: none;
+  width: 100%;
+  background-color: #4F63A0;
+  display: flex;
+  padding: 1.3rem;
+}
+
+.dribble{
+  display: flex;
+  background: #EBEBEB;
+}
+
+.dribble img{
+  width:16%;
+  height:24vh;
+}
+.grapple{
+  display: flex;
+  margin: 2rem;
+}
+.grapple input{
+  width:90vh;
+  height: 05vh;
+  border-radius: 04px;
+  padding: 20px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.grapple button{
+  cursor: pointer;
+  background: #4F63A0;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 04px;
+  padding: 1vh;
+}
+
+.grappled ion-icon{
+  font-size: larger;
+}
+
+
+.home-dot .text h1{
+  font-size: 60px;
+  color: black;
+}
+.home-dot .fired{
+  font-size: 20px;
+  font-weight: bolder;
+  color: aqua;
+}
+.home-dot .firedd{
+  font-size: 14px;
+  font-weight: bolder;
+  color: white;
+}
+.home-dot .text{
+  padding: 23vh;
+}
+
+a{
+  
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+.home-dot button{
+  background: #DF2100;
+  padding: 1.4rem;
+  margin: 2rem;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.home-dot{
+  background: url('../images/wallpaperflare.com_wallpaper.jpg');
+  background-size: cover;
+}
+
+.safari .all-my-life{
+  color: black;
+  margin: 10vh;
+  text-align: center;
+}
+
+.unchosen{
+  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.mission{
+  margin: 2rem;
+}
+
+.categories{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cause{
+  border: grey 2px solid;
+  border-radius: 3px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  margin: 2rem;
+}
+
+.just-cause img{
+  width:23vh;
+  height:30vh;
+}
+.just-cause{
+  display: flex;
+  justify-content: center;
+}
+.texto{
+  display: block;
+  padding: 1rem;
+}
+
+.texto p{
+  margin:.5rem;
+  color:black;
+}
+
+.categories-1{
+  color: black;
+  font-size: 24px;
+  position: absolute;
+  left: 97vh;
+}
+.cause .texto:hover{
+  color: #0B3051;
+}
+.cause .texto p:hover{
+  color: #0B3051;
+}
+
+.toil{
+  display: flex;
+}
+.toil-1{
+  margin: 1rem;
+  background: url('../images/wallpaperflare.com_wallpaper\ \(2\).jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vh;
+  height: 40vh;
+  border-radius: 04px;
+  color: white;
+}
+ .paint{
+margin: 05vh;
+font-weight: bolder;
+font-size: 30px;
+line-height: 04vh;
+color: black;
+}
+
+.pain{
+  color: lightgreen;
+  margin: 05vh;
+font-weight: bolder;
+  font-size: 25px;
+  line-height: 04vh;
+}
+.pain-2{
+  color: red;
+  margin: 05vh;
+font-weight: bolder;
+  font-size: 25px;
+  line-height: 04vh;
+}
+.toil-2{
+  margin: 1rem;
+  background: url('../images/wallpaperflare.com_wallpaper\ \(1\).jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vh;
+  height: 40vh;
+  border-radius: 04px;
+  color: white;
+  text-align: left;
+}
+
+.toil-1 button{
+  cursor: pointer;
+  background: #4F63A0;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 04px;
+  padding: 2vh;
+  margin-left: 4rem;
+}
+.toil-2 button{
+  cursor: pointer;
+  background: #4F63A0;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 04px;
+  padding: 2vh;
+  margin-left: 4rem;
+}
+
+.division{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: black;
+}
+
+hr{
+  height: 10px;
+  background-color: red;
+  color: red;
+  border-radius: 10px;
+}
+
+.div{
+  margin: 05%;
+}
+.div p{
+  font-size: 17px;
+  font-display:calc(20px);
+  font-weight: bolder;
+  font-style: oblique;
+}
+
+.foil{
+  width: 100%;
+  background: url('../images/wallpaperflare.com_wallpaper\ \(3\).jpg');
+  background-size: cover;
+  padding: 10rem;
+}
+
+.foil h3{
+  font-size: 70px;
+  color: black;
+}
+.foil button{
+  cursor: pointer;
+  background: #4F63A0;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 04px;
+  padding: 3vh;
+  margin-left: 10rem;
+}
+
+.fat{
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.fat-1{
+  border-style: groove;
+  border: 2px solid grey;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.fat-1 img{
+  width: 300px;
+  height: 200px;
+}
+
+footer{
+  background-color: #3F3F3F;
+  padding: 6rem;
+}
+
+.divident{
+  display: flex;
+}
+
+.dare{
+  display: flex;
+  margin: 4rem;
+
+}
+
+.dare h4,h5{
+  color: white;
+}
+
+.dare i{
+  font-size: 40px;
+  color: #fff;
+}
+
+.talk{
+  margin-left:10px;
+}
+
+.vl {
+  border-left: 6px solid #DADADA;
+  height: 300px;
+}
+
+.hr-hr{
+  width:100%;
+  text-align:left;
+  margin-left:0
+}
+
+
+.divident .dividends h3{
+  font-size: 20px;
+}
+.divident .dividends p{
+  font-size: 20px;
+  margin: .5rem;
+}
+.divident .dividends{
+  color: white;
+  margin: 7rem;
+
+}
+
+.©-2023{
+  color: black;
+}
+
+.dividends img{
+  width: 290px;
+  height: 200px;
+}
+
+p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: oblique;
+  font-size: large;
+  padding: 1rem;
+}
+
+.flatter{
+  color: black;
+  margin: 20vh;
+  border: 2px solid #0B3051;
+  width: fit-content;
+  height: fit-content;
+  padding: 2.13rem;
+  display: flex;
+  border-radius: 2%;
+}
+.give h1{
+  font-size: 40px;
+}
+.give{
+  display: flex;
+}
+
+.down{
+  display: flex;
+  margin: 15vh 0vh 0vh 0vh;
+  justify-content: space-between;
+}
+.downish{
+  display: flex;
+  margin: 10vh 0vh 0vh 0vh;
+  justify-content: space-between;
+}
+.downish-1{
+  display: flex;
+  margin: 0vh 0vh 0vh 0vh;
+  justify-content: space-between;
+}
+.downed{
+  margin:8rem;
+}
+.downed-2{
+  margin:8rem;
+}
+.GOSHI{
+cursor: pointer;
+background: #0B3051;
+color: white;
+width: 80VH;
+height: fit-content;
+border-radius: 04px;
+padding: 2vh;
+font-size: 20px;
+}
+
+.cry{
+width: 60vh;
+background-color: aqua;
+color: aqua;
+border-radius: 20px;
+}

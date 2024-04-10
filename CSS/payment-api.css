@@ -1,0 +1,75 @@
+.fort{
+  width:86vh;
+  height: 70vh;
+  border-radius: 5%;
+  border-top: 15px solid #0B3051;;
+  border-left: 5px solid #0B3051;
+  border-right: 5px solid #0B3051;
+  border-bottom: 15px solid #0B3051;
+  box-shadow: 10px 0px 20px 0px black;
+  position: absolute;
+top: 20%;
+left: 34%;
+margin-top: -50px;
+margin-left: -50px;
+}
+.try{
+  margin: 2.5rem;
+}
+.try i{
+  text-align: center;
+  font-size: 120px;
+  margin-left:30vh;
+  margin-top:13vh;
+}
+.try h1{
+  font-size: 50px;
+  text-align: center;
+  color: black;
+}
+.try h3{
+  font-size: 23px;
+  text-align: center;
+  color: black;
+}
+
+.cried{
+  width:90vh;
+  height: fit-content;
+  border-radius: 5%;
+  border-top: 15px solid #0B3051;;
+  border-left: 5px solid #0B3051;
+  border-right: 5px solid #0B3051;
+  border-bottom: 15px solid #0B3051;
+  box-shadow: 10px 0px 20px 0px black;
+  position: absolute;
+top: 20%;
+left: 34%;
+margin-top: -50px;
+margin-left: -50px;
+}
+  .fale{
+    margin: 10% 15%;
+  }
+  .fale h3{
+    font-size: 30px;
+    color: black;
+  }
+  .fale h1{
+    font-size: 60px;
+    color: black;
+  }
+  .fale i{
+    font-size: 70px;
+    color: red;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .buttton{
+    padding: 1.5rem;
+    color: white;
+    background: #0B3051;
+    width: 60vh;
+    margin:1.5rem;
+    border-radius: 20px;
+  }
