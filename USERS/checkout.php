@@ -34,8 +34,12 @@
         <h1>Thank You</h1>
       </div>
       <p>To finalize your subscription, kindly complete your payment using a discount code if any.!</p>
-      
-      <button class="GOSHI">PURCHASE</button>
+      <?php
+                    // if(isset($_POST['payNow'])){
+                    include('pay.php');
+                    // }
+                    ?>
+      <!-- <button class="GOSHI">PURCHASE</button> -->
       <div class="downish">
         <h1>TOTAL:</h1>
         <h1 class="come">40000RWF</h1><br><br>
