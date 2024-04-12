@@ -20,13 +20,14 @@ $transaction_id = rand(1, 999999) . 'code' . date('ymdhis') . rand(10000, 999999
     <input type="hidden" name="customer[name]" value="<?php echo $row['u_name']; ?>" />
     <input type="hidden" name="tx_ref" value="<?php echo $transaction_id; ?>" />
     <input type="hidden" name="amount" value="<?php 
-    $sql = mysqli_query($con, "SELECT SUM(u_totalprice) AS total FROM `order` WHERE user_id='$id'");
+    $O_id=$_GET['o_id'];
+    $sql = mysqli_query($con, "SELECT u_totalprice AS total FROM `order` WHERE id='$O_id'");
     $row = mysqli_fetch_array($sql);
     $total = $row['total'];
     echo $total;
     ;?>" />
     <input type="hidden" name="currency" value="RWF" />
-    <input type="hidden" name="" value="" />
+    <input type="hidden" name="redirected_Url" value="" />
     <div class="PayButton">
     <h1>JUST PRESS THE BUTTON</h1>
         <button type="submit" class="GOSHI" id="start-payment-button">PURCHASE</button>

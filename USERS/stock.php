@@ -89,7 +89,6 @@
               <th>#</th>
               <TH>TOOL NAME</TH>
               <th>TYPE</th>
-              <th>NUMBER OF ITEMS AVAILABLE</th>
               <th>TOOL DESCRIPTION</th>
               <th>DATE</th>
               <th>PRICE</th>
@@ -106,7 +105,6 @@
               <td><?php echo $row['id']?></td>
               <td><?php echo $row['u_toolname']?></td>
               <td><?php echo $row['u_type']?></td>
-              <td><?php echo $row['u_itemsnumber']?></td>
               <td><?php echo $row['u_tooldescription']?></td>
               <td><?php echo $row['u_date']?></td>
               <td><?php echo $row['u_price']?></td>

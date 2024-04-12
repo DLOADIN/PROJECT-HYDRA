@@ -93,18 +93,20 @@
               <th>NUMBER OF ITEMS</th>
               <th>TOOL DESCRIPTION</th>
               <th>PRICE</th>
-              <th>TOTAL PRICE</th>
+              <th>TOTAL PRICE TO BE PAID</th>
               <th>DATE</th>
               <th>PAY</th>
               </tr>
             <?php
+            $number=0;
              $sql = "SELECT `order`.*, user.u_name FROM `order`INNER JOIN user ON `order`.user_id = user.id WHERE `order`.user_id = '$id'";
                 $result = mysqli_query($con, $sql);
                 if ($result && mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_array($result)) {
+                  $number++;
             ?>
             <tr>
-              <td><?php echo $row['id']?></td>
+              <td><?php echo  $number?></td>
               <td><?php echo $row['u_name']?></td>
               <td><?php echo $row['u_toolname']?></td>
               <td><?php echo $row['u_itemsnumber']?></td>
@@ -114,7 +116,7 @@
               <td><?php echo $row['u_totalprice']?></td>
               <td><?php echo $row['u_date']?></td>
               <td>  
-                <button class="lebutton"><a href="pay.php?id=<?php echo $row['id']?>">PAY UP</a></button>
+                <button class="lebutton"><a href="pay.php?o_id=<?php echo $row['id']?>">PAY UP</a></button>
               </td>
               <?php
           }

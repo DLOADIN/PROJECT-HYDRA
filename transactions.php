@@ -95,46 +95,38 @@
         </div>       
          </div>
          <div class="new-amounts"> 
-          <div class="title">
-          <h2 class="h2">ENTRY/STOCK DATA</h2>
-          </div><table><tr>
-              <th>#</th>
-              <TH>TOOL NAME</TH>
-              <th>TYPE</th>
-              <th>NUMBER OF ITEMS</th>
-              <th>AMOUNT</th>
-              <th>STATUS</th>
-              <th>DATE</th>
-              </tr>
+        <div class="title">
+        <h2 class="h2">ENTRY/STOCK DATA</h2>
+        </div><table><tr>
+            <th>#</th>
+            <th>YOUR ORDER CODE</th>
+            <th>AMOUNT PAID</th>
+            <th>DATE</th>
+            </tr>
+          <?php
+          $number=0;
+          $sql=mysqli_query($con,"SELECT `transaction`.*, `order`.`id`,`order`.`u_totalprice` FROM `transaction`INNER JOIN `order` ON `transaction`.id = `order`.id;");
+          $row = mysqli_num_rows($sql);
+          if($row){
+            while($row=mysqli_fetch_array($sql))
+            $number++;
+            { 
+          ?>
+          <tr>
+            <td><?php echo $number?></td>
+            <td><?php echo $row['order_id']?></td>
+            <td><?php echo $row['u_totalprice']?></td>
+            <td><?php echo $row['u_date']?></td>
+            <!-- <td>STATUS</td> -->
+            </td>
             <?php
-            $sql=mysqli_query($con,"SELECT * FROM productentry ORDER BY p_amount DESC");
-            $row = mysqli_num_rows($sql);
-            if($row){
-              while($row=mysqli_fetch_array($sql))
-              { 
-            ?>
-            <tr>
-              <td><?php echo $row['id']?></td>
-              <td><?php echo $row['u_name']?></td>
-              <td><?php echo $row['p_name']?></td>
-              <td><?php echo $row['p_amount']?></td>
-              <td><?php echo $row['p_date']?></td>
-              <td><?php echo $row['p_date']?></td>
-              <td>  
-                <button class="lebutton"><a href="stock.php">UPDATE</a></button>
-              </td>
-              <td>  
-                <button class="lebutton"><a style="color: red;"href="./delete/delete.php">DELETE</a></button>
-              </td>
-              </td>
-              <?php
-            }
           }
-              ?>
-          </tr>
-        </table>
-        </div>
-        </div>
+        }
+            ?>
+        </tr>
+      </table>
+      </div>
+      </div>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
