@@ -164,7 +164,7 @@
             </div>
             <div id="btn-2">
               <button name="submit" type="submit" class="button-1">
-              <a href="checkout.php">PURCHASE</a></button>
+              PURCHASE</a></button>
             </div>
           </form></div>
         </div>
@@ -188,7 +188,8 @@
     $tooldescription = $_POST['u_tooldescription'];
     $date = date('Y-m-d',strtotime($_POST['u_date']));
     $price= $_POST['u_price'];
-    $sql=mysqli_query($con,"INSERT INTO `order` VALUES ('','$user_id', '$toolname', '$nitems', '$type', '$tooldescription', '$date', '$price')");
+    $total_price = $nitems * $price;
+    $sql=mysqli_query($con,"INSERT INTO `order` VALUES ('','$user_id', '$toolname', '$nitems', '$type', '$tooldescription', '$date', '$price','$total_price')");
     
     if($sql){
       echo "<script>alert('Recorded Successfully')</script>";

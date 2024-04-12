@@ -1,6 +1,13 @@
 <?php
-// PHP variables
-$customer_id = $_SESSION["id"];
+  require "connection.php";
+  if(!empty($_SESSION["id"])){
+  $id = $_SESSION["id"];
+  $check = mysqli_query($con,"SELECT * FROM `user` WHERE id=$id ");
+  $row = mysqli_fetch_array($check);
+  }
+  else{
+  header('location:loginuser.php');
+  } 
 $customer_phone = 2507;
 $transaction_id = rand(1, 999999) . 'code' . date('ymdhis') . rand(10000, 999999);
 ?>
@@ -12,10 +19,39 @@ $transaction_id = rand(1, 999999) . 'code' . date('ymdhis') . rand(10000, 999999
     <input type="hidden" name="customer[email]" value="<?php echo $row['u_email']; ?>" />
     <input type="hidden" name="customer[name]" value="<?php echo $row['u_name']; ?>" />
     <input type="hidden" name="tx_ref" value="<?php echo $transaction_id; ?>" />
-    <input type="hidden" name="amount" value="<?php echo 1000; ?>" />
+    <input type="hidden" name="amount" value="<?php 
+    $sql = mysqli_query($con, "SELECT SUM(u_totalprice) AS total FROM `order` WHERE user_id='$id'");
+    $row = mysqli_fetch_array($sql);
+    $total = $row['total'];
+    echo $total;
+    ;?>" />
     <input type="hidden" name="currency" value="RWF" />
-    <input type="hidden" name="redirect_url" value="/." />
+    <input type="hidden" name="" value="" />
     <div class="PayButton">
+    <h1>JUST PRESS THE BUTTON</h1>
         <button type="submit" class="GOSHI" id="start-payment-button">PURCHASE</button>
     </div>
 </form>
+<style>
+    .payButton{
+        border:2px solid black;
+        border-top: 15px solid black;
+        border-bottom: 15px solid black;
+        border-radius:30vh;
+        padding:5vh;
+        margin:30vh;
+        height: fit-content;
+    }
+    button{
+        padding:1rem;
+        border-radius:10px;
+        background-color: #0B3051;
+        color: azure;
+        
+        margin-left:61vh;
+    }
+    h1{
+        text-align: center;
+        margin-left:1vh
+    }
+</style>

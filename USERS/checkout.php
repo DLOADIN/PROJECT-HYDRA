@@ -31,48 +31,13 @@
       <img src="../images/Captured.JPG" alt=""><br>
       <div class="give">
         <ion-icon name="pricetags-outline"></ion-icon>
-        <h1>Thank You</h1>
+        <h1>Thank You For Buying With Us</h1>
       </div>
       <p>To finalize your subscription, kindly complete your payment using a discount code if any.!</p>
-      <?php
-                    // if(isset($_POST['payNow'])){
-                    include('pay.php');
-                    // }
-                    ?>
-      <!-- <button class="GOSHI">PURCHASE</button> -->
-      <div class="downish">
-        <h1>TOTAL:</h1>
-        <h1 class="come">40000RWF</h1><br><br>
-  </div>
       <div class="downish-1">
     <hr class="cry">
   </div> 
-    </div>
-    <div class="flatter-2">
-      <div class="down">
-        <div class="downed">
-          <h1>
-            Price
-          </h1>
-          <h1>
-            Discount
-          </h1>
-        </div>
-        <div class="downed-2">
-          <h1>
-            <?php 
-            $sql = mysqli_query($con, "SELECT SUM(u_price) AS total FROM `order` WHERE id='$id'");
-            $row=mysqli_fetch_array($sql);
-            $total = $row['total'];
-            ?>
-            <td><?php echo $total."RWF";?>
-          </h1>
-          <h1 class="come">
-            0%
-          </h1>
-        </div>
-    </div>  
-    </div>
+  </div>
   </div>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

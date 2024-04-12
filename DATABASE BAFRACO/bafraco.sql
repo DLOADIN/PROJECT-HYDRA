@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2024 at 12:40 PM
+-- Generation Time: Apr 12, 2024 at 11:17 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -57,17 +57,19 @@ CREATE TABLE `order` (
   `u_type` varchar(80) DEFAULT NULL,
   `u_tooldescription` varchar(255) DEFAULT NULL,
   `u_date` date DEFAULT NULL,
-  `u_price` int(80) NOT NULL
+  `u_price` int(80) NOT NULL,
+  `u_totalprice` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `order`
 --
 
-INSERT INTO `order` (`id`, `user_id`, `u_toolname`, `u_itemsnumber`, `u_type`, `u_tooldescription`, `u_date`, `u_price`) VALUES
-(5, 2, 'Mangos', 11000, 'Very Good', 'I love these items', '2024-04-08', 10000),
-(8, 2, 'APPLES', 11000, 'Very Good', 'I love these items', '2024-04-09', 10000),
-(9, 2, 'APPLES', 11, 'Very Good', 'I love these items', '2024-04-10', 10000);
+INSERT INTO `order` (`id`, `user_id`, `u_toolname`, `u_itemsnumber`, `u_type`, `u_tooldescription`, `u_date`, `u_price`, `u_totalprice`) VALUES
+(5, 2, 'Mangos', 11000, 'Very Good', 'I love these items', '2024-04-08', 10000, 0),
+(8, 2, 'APPLES', 11000, 'Very Good', 'I love these items', '2024-04-09', 10000, 0),
+(9, 2, 'APPLES', 11, 'Very Good', 'I love these items', '2024-04-10', 10000, 110000),
+(11, 1, 'Silicone 500mg', 5, 'Not Good', 'From China', '2024-04-12', 10000, 50000);
 
 -- --------------------------------------------------------
 
@@ -185,7 +187,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tool`

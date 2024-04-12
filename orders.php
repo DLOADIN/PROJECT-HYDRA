@@ -105,7 +105,8 @@
               <th>TYPE</th>
               <th>NUMBER OF ITEMS</th>
               <th>TOOL DESCRIPTION</th>
-              <th>PRICE TO BE PAID</th>
+              <th>PRICES</th>
+              <th>TOTAL PRICE</th>
               <th>DATE</th>
               <th>DELETE</th>
               </tr>
@@ -123,6 +124,7 @@
               <td><?php echo $row['u_type']?></td>
               <td><?php echo $row['u_tooldescription']?></td>
               <td><?php echo $row['u_price']?></td>
+              <td><?php echo $row['u_totalprice']?></td>
               <td><?php echo $row['u_date']?></td>
               <td>  
               <button class="lebutton" onclick="alert('Are You Really Sure You Want To Delete This')"><a style="color: red;" href="./delete/deleteorder.php?id=<?php echo $row['id']?>">DELETE</a></button>
